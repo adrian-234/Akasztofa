@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script src="https://kit.fontawesome.com/4455646216.js" crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="mainStyle.css">
+        <script src="data.js"></script>
+    
+        <title>Akasztófa</title>
+    </head>
+<body>
+    <header>
+        <div class="left">
+            <div id="topRndBtn" class="rndBtn" onclick="location.href='index.html'"><i class="fa-solid fa-left-long"></i></div>
+
+            <h1 id="category">Katergóriák</h1>
+        </div>
+    </header>
+
+    <script>
+        const body = document.querySelector("body");
+
+        for(let i = 0; i < catNames.length; i++) {
+            let div = document.createElement("div");
+            div.classList.add("categories");
+            div.id = i;
+            div.appendChild(document.createTextNode(catNames[i]));
+            div.addEventListener("click", () => {
+                location.href="game.html?catid=" + div.id;
+            })
+
+            body.appendChild(div);
+        }
+    </script>
+</body>
+</html>

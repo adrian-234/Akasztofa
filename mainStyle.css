@@ -1,0 +1,375 @@
+body {
+    background-image: url(./kepek/hatterkep.jpg);
+    background-position: 60% 20%;
+
+    font-family: Impact, sans-serif;
+
+
+    --background_transparent: rgba(47, 70, 181, 0.95);
+    --background: #2463FF;
+    --border_light: #487cff;
+    --border: #2762FA;
+    --red: rgb(255, 80, 80);
+    --green: rgb(2, 179, 2);
+}
+
+.rndBtn {
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    background-image: linear-gradient(#FF71FF 0%, #A18BFE 75%);
+
+    box-shadow: 0 0 8px 2px #9A2FF1;
+
+    transition: .2s;
+
+    cursor: pointer;
+}
+.rndBtn:hover {
+    box-shadow: 0 0 12px 3px #9A2FF1;
+}
+
+.wideFullyRndBtn {
+    width: 230px;
+    max-width: 75%;
+    height: 40px;
+
+    margin: 30px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    background-color: var(--background);
+
+    border-radius: 30px;
+
+    transition: .2s;
+
+    cursor: pointer;
+}
+.wideFullyRndBtn:hover {
+    box-shadow: 0 0 4px 2px var(--border);
+    transform: scale(1.03);
+}
+
+main {
+    width: 430px;
+    max-width: 90%;
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    margin: auto;
+
+    padding: 40px 30px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+
+    border-radius: 30px;
+    border-top: 10px;
+    border-right: 4px;
+    border-bottom: 4px;
+    border-left: 4px;
+    border-color: var(--border);
+    border-style: solid;
+
+    background-color: var(--background_transparent);
+}
+
+#title {
+    width: 300px;
+
+    margin: -95px 0 0;
+}
+
+#playBtn {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 25px;
+
+    font-size: 40px;
+    
+    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);    
+}
+#playBtn > i {
+    transition: .2s;
+    transform: rotateZ(-11deg) scaleX(1.08);
+}
+#playBtn:hover > i {
+    transform: translateY(-2px) rotateZ(-11deg) scaleX(1.11) scaleY(1.03);
+    text-shadow: 0px 7px 2px rgba(0, 0, 0, 0.8);
+}
+
+#topRndBtn {
+    width: 40px;
+    height: 40px;
+
+    font-size: 22px;
+}
+
+
+
+/* Szabalyok css */
+#rules {
+    width: 550px;
+}
+
+.ruleText {
+    color: white;
+    font-size: 24px;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+
+
+/* game css */
+header {
+    margin: 30px 20px 0px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    position: relative;
+
+    margin-bottom: 30px;
+}
+
+#category {
+    margin: 0 0 0 70px;
+
+    color: white;
+    font-size: 38px;
+}
+
+#heart {
+    width: 35px;
+}
+
+#healthCounter {
+    width: 35px;
+
+    position: absolute;
+    right: 0;
+
+    text-align: center;
+    color: white;
+
+    animation: .3s linear 0s 1 normal;
+}
+
+#healthbar{
+    width: 160px;
+    height: 16px;
+
+    margin-right: 15px;
+
+    padding: 3px;
+
+    background-color: white;
+    
+    border-radius: 17.5px;
+}
+#healthbar > div {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(37,23,113);
+
+    border-radius: inherit;
+
+    transition: .3s;
+
+    animation: .3s linear 0s 1 normal;
+}
+
+#word {
+    max-width: 736px;
+
+    margin: 100px auto;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#word > div {
+    width: 80px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+
+    margin: 6px;
+
+    text-transform: uppercase;
+    color: white;
+    font-size: 46px;
+
+    background-color: var(--background_transparent);
+}
+#word > div.selected {
+    background-color: var(--background);
+
+    border-top: 3px;
+    border-right: 1px;
+    border-left: 1px;
+    border-bottom: 0px;
+    border-color: var(--border_light);
+    border-style: solid;
+
+    box-sizing: border-box;
+}
+
+#letterContainer {
+    max-width: 1044px;
+
+    margin: 100px auto;
+    
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+#letterContainer > div {
+    width: 75px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    margin: 6px;
+
+    text-transform: uppercase;
+    font-size: 28px;
+
+    animation: .2s ease-in-out 0s 1 normal forwards;
+
+    cursor: pointer;
+}
+
+#popUp {    
+    z-index: 99;
+
+    display: none;
+}
+
+#continueBtn {
+    width: 270px;
+    height: 45px;
+}
+
+#quitBtn {
+    background-image: linear-gradient(#FF71FF 0%, #A18BFE 75%);
+}
+#quitBtn:hover {
+    box-shadow: 0 0 4px 2px #FF71FF;
+}
+
+/* kategóriák css */
+.categories {
+    width: 300px;
+    
+    margin: 40px auto 0;
+    padding: 4px 0;
+
+    font-size: 28px;
+    color: white;
+    text-align: center;
+
+    background-color: var(--background);
+
+    border-radius: 12px;
+    border: 2px solid var(--border_light);
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+.categories ~ .categories {
+    margin-top: 20px;
+}
+.categories:hover {
+    box-shadow: 0 0 4px 2px var(--border);
+    transform: scale(1.03);
+}
+
+
+
+
+/* animációk */
+@keyframes correct {
+    0% {background-color: var(--green); opacity: 1;}
+    33% {transform: translateY(-3px);}
+    66% {transform: translateY(3px); background-color: var(--green); opacity: 1;}
+    100% {opacity: 0.2; background-color: white; transform: translateY(0px);}
+}
+@keyframes wrong {
+    0% {background-color: var(--red); opacity: 1;}
+    33% {transform: rotate(-10deg);}
+    66% {transform: rotate(10deg); background-color: var(--red); opacity: 1;}
+    100% {opacity: 0.2; background-color: white; transform: rotate(0deg);}
+}
+
+@keyframes hurt {
+    0% {background-color: initial;}
+    50% {background-color: var(--red);}
+    100% {background-color: initial;}
+}
+@keyframes hurt2 {
+    0% {color: initial;}
+    50% {color: var(--red);}
+    100% {color: initial;}
+}
+
+@media screen and (max-width: 1060px) {
+    #letterContainer > div {
+        max-width: 95px;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main:not(#popUp) {
+        position: relative;
+        left: 0;
+        top: 0;
+
+        margin: 80px auto 0;
+
+        transform: none;
+    }
+}

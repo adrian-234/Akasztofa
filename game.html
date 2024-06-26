@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/4455646216.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="mainStyle.css">
+
+    <script src="data.js"></script>
+    
+
+    <title>Akasztófa</title>
+</head>
+<body onload="newWord()">
+    <main id="popUp">
+        <img src="" alt="" id="title">
+        <div class="wideFullyRndBtn" id="newCatBtn" onclick="location.href='category.html'">Új kategória</div>
+        <div class="wideFullyRndBtn" id="continueBtn">Új szó</div>
+        <div class="wideFullyRndBtn" id="quitBtn" onclick="location.href='index.html'">Kilépés</div>
+    </main>
+
+    <header>
+        <div class="left">
+            <div id="topRndBtn" class="rndBtn"><i class="fa-solid fa-bars"></i></div>
+            <h1 id="category"></h1>
+        </div>
+
+        <div class="right">
+            <div id="healthbar">
+                <div></div>
+            </div>
+            <img id="heart" src="./kepek/sziv.png" alt="sziv">
+            <div id="healthCounter"></div>
+        </div>
+    </header>
+
+
+    <div id="word"></div>
+
+    <div id="letterContainer"><div>a</div><div>á</div><div>b</div><div>c</div><div>d</div><div>e</div><div>é</div><div>f</div><div>g</div><div>h</div><div>i</div><div>í</div><div>j</div><div>k</div><div>l</div><div>m</div><div>n</div><div>o</div><div>ó</div><div>ö</div><div>ő</div><div>p</div><div>q</div><div>r</div><div>s</div><div>t</div><div>u</div><div>ú</div><div>ü</div><div>ű</div><div>v</div><div>w</div><div>x</div><div>y</div><div>z</div></div>
+
+
+    
+    <script src="game.js"></script>
+</body>
+</html>
