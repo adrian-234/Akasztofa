@@ -252,7 +252,7 @@ header > div {
 #letterContainer {
     max-width: 1044px;
 
-    margin: 100px auto;
+    margin: 100px auto 0;
     
     display: flex;
     justify-content: left;
